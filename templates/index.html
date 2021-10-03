@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block head %}
+<title>My flask Template</title>
+{% endblock %} {% block body %}
+<div class="container">
+  <!-- inside here i put all my context for the index.html page-->
+  <a href="{{ url_for('data_page') }}">Redirecting to Template</a>
+  <a href="{{ url_for('fetch_page') }}">Go to a page for fetch</a>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block head %}
+<title>My flask Template</title>
+{% endblock %} {% block body %}
+<div class="container">
+  <!-- inside here i put all my context for the index.html page-->
+  {% for card in cards %}
+  <div class="card-container">
+    <div class="content">
+      <h1>{{ card.title }}</h1>
+      <h3>{{ card.content }}</h3>
+    </div>
+    <div class="flap"></div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
