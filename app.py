@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return render_template('index.html')
+    return render_template('loginForm.html')
 
 @app.route("/data_page")
 def data_page():
@@ -35,6 +35,28 @@ def get_table_data():
     )
     return response
 
+
+@app.route('/login', methods=['POST'])
+def log_in_functionlaity():
+
+    email = request.form['email']
+    password = request.form['password']
+    print("Email:",email)
+    print("password:",password)
+
+    return render_template('cards.html')
+
+@app.route('/search', methods=['GET'])
+def search():
+    return render_template('search.html')
+
+
+@app.route('/open_modal', methods=['GET'])
+def open_modal():
+    return render_template('full_page_modal.html')
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
@@ -43,7 +65,7 @@ if __name__ == "__main__":
 #python3 -m venv venv
 #    . venv/bin/activate
 #pip install Flask
-
+#pip install pandas
 
 #python3 app.py
 

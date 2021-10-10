@@ -1,0 +1,57 @@
+{% extends 'base.html' %} {% block head %}
+<title>My flask Template</title>
+{% endblock %} {% block body %}
+<div class="container-login-form">
+  <div id="left_pannel" class="login-form-left">
+    <form
+      action="/login"
+      method="POST"
+      id="login-form"
+      class="login-form"
+      role="main"
+    >
+      <h1 class="a11y-hidden">Login Form</h1>
+      <div>
+        <label class="label-email">
+          <input
+            type="email"
+            class="text"
+            name="email"
+            placeholder="Email"
+            tabindex="1"
+            required
+            id="email"
+          />
+          <span class="required">Email</span>
+        </label>
+      </div>
+      <input
+        type="checkbox"
+        name="show-password"
+        class="show-password a11y-hidden"
+        id="show-password"
+        tabindex="3"
+      />
+      <label class="label-show-password" for="show-password">
+        <span>Show Password</span>
+      </label>
+      <div>
+        <label class="label-password">
+          <input
+            type="text"
+            class="text"
+            name="password"
+            placeholder="Password"
+            tabindex="2"
+            required
+            id="password"
+          />
+          <span class="required">Password</span>
+        </label>
+      </div>
+      <button id="loginButton" class="login-form-button">Log in</button>
+    </form>
+  </div>
+  <di id="right_pannel" class="login-form-right"></di>
+</div>
+{% endblock %}

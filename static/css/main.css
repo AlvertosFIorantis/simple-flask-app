@@ -22,7 +22,8 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #111;
+  background-color: white;
+  /* nice black #111 */
 }
 
 .container {
@@ -37,7 +38,7 @@ body {
 
 /* Button CSS */
 
-a {
+.container a {
   position: relative;
   width: 280px;
   height: 60px;
@@ -52,7 +53,7 @@ a {
   trasnition: var(--speed-normal);
   border: 1px solid var(--color-red);
 }
-a:hover {
+.container a:hover {
   border: 1px solid transparent;
   background: var(--color-red) url("/static/images/pixel.png");
   transition-delay: 0.8s;
@@ -61,10 +62,10 @@ a:hover {
   animation: animate var(--speed-fast) steps(8) forwards;
   cursor: pointer;
 }
-a:last-of-type {
+.container a:last-of-type {
   border: 1px solid var(--color-purple);
 }
-a:last-of-type:hover {
+.container a:last-of-type:hover {
   background: var(--color-purple) url("/static/images/pixel2.png");
 }
 

@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block head %}
+<title>My flask Template</title>
+{% endblock %} {% block body %}
+<div class="cards-container">
+  <div class="card">
+    <div class="face face1">
+      <div class="content-image_1">
+        <div class="image-title">Design</div>
+      </div>
+    </div>
+    <div class="face_words face2">
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum
+          cumque minus iste veritatis provident at.
+        </p>
+        <a class="card-navigation" href="{{ url_for('search') }}">Launch App</a>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="face face1">
+      <div class="content-image_2">
+        <div class="image-title">Second Search</div>
+      </div>
+    </div>
+    <div class="face_words face2">
+      <div class="content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cum
+          cumque minus iste veritatis provident at.
+        </p>
+        <a class="card-navigation" href="{{ url_for('open_modal') }}"
+          >Launch App</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

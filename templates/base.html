@@ -20,6 +20,22 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='css/main.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/login_form.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/cards.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/search.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/modal.css') }}"
+    />
     {% block head %}{% endblock %}
   </head>
   <body>
@@ -27,6 +43,18 @@
   </body>
   <script
     src="{{url_for('static', filename='javascript/index.js')}}"
+    defer
+  ></script>
+  <script
+    src="{{url_for('static', filename='javascript/loginPage.js')}}"
+    defer
+  ></script>
+  <script
+    src="{{url_for('static', filename='javascript/search.js')}}"
+    defer
+  ></script>
+  <script
+    src="{{url_for('static', filename='javascript/openModal.js')}}"
     defer
   ></script>
 </html>

@@ -1,0 +1,185 @@
+@keyframes card-container-loading {
+  from {
+    /* transform: translate3d(0, 0, 0); */
+    transform: translateY(-100%);
+  }
+  to {
+    /* transform: translate3d(0, 100%, 100%); */
+    transform: translateY(0%);
+  }
+}
+
+.cards-container {
+  width: 1500px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  animation-name: card-container-loading;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+.cards-container .card {
+  position: relative;
+  /* cursor: pointer; */
+  margin-bottom: 100px;
+}
+
+.cards-container .card .face {
+  width: 600px;
+  height: 400px;
+  transition: 0.5s;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.cards-container .face_words {
+  width: 600px;
+  height: 200px;
+  transition: 0.5s;
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+}
+
+.cards-container .card .face.face1 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(150px);
+  border: 1px solid #306090;
+  color: #306090;
+}
+
+.cards-container .card:hover .face.face1 .content h3 {
+  color: #fff;
+}
+
+.cards-container .card:hover .face.face1 {
+  background: #306090;
+  transform: translateY(0);
+  color: #fff;
+}
+
+.icon-size {
+  font-size: 155px;
+  margin-bottom: 50px;
+  color: #306090;
+}
+
+.cards-container .card:hover .icon-size {
+  background: #306090;
+
+  color: #fff;
+}
+
+.cards-container .card .face.face1 .content h3 {
+  margin: 10px 0 0;
+  padding: 0;
+  color: #306090;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.cards-container .card .face_words.face2 {
+  position: relative;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  transform: translateY(-100px);
+}
+
+.cards-container .card:hover .face_words.face2 {
+  transform: translateY(0);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.cards-container .card .face_words.face2 .content p {
+  margin: 0;
+  padding: 0;
+}
+
+.content-image_1 {
+  background-image: url("/static/images/ship_2.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.content-image_2 {
+  background-image: url("/static/images/ship_4.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.image-title {
+  position: absolute;
+  font-size: 50px;
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  opacity: 50%;
+}
+
+.cards-container .card:hover .image-title {
+  opacity: 0;
+}
+
+.card-navigation {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 4rem;
+  margin-top: 50px;
+  font-size: 20px;
+  border: #306090 1px solid;
+  border-radius: 0;
+  color: #306090;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 450ms ease-in-out;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-navigation:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 100%;
+  background: #306090;
+  z-index: -1;
+  transition: width 450ms ease-in-out;
+}
+.card-navigation:hover {
+  color: #fff;
+}
+.card-navigation:hover:after {
+  width: 110%;
+}
